@@ -1,1 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#101010" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="description" content="AMBER Streetwear — convierte tus dificultades en motivación." />
+  <title>AMBER — Streetwear sin límites</title>
 
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="./assets/icons/favicon.ico" />
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="notice">ENVÍO GRATIS EN PEDIDOS +80€ <span>·</span> HECHO EN ESPAÑA</div>
+
+  <header class="header">
+    <a class="brand" href="#inicio" aria-label="AMBER inicio">AMBER<span>®</span></a>
+    <button class="menu-btn" aria-label="Abrir menú" aria-expanded="false">MENÚ</button>
+    <nav id="nav">
+      <a href="#coleccion">Colección</a>
+      <a href="#historia">Nuestra historia</a>
+      <a href="#lookbook">Lookbook</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="bag" aria-label="Abrir bolsa">BOLSA <b id="count">0</b></button>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="grain"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">DROP 01 · 2026</p>
+        <h1>NO HAY<br><em>LÍMITES.</em></h1>
+        <p>Convierte tus dificultades en motivación.</p>
+        <a class="button amber" href="#coleccion">EXPLORAR COLECCIÓN <i>↘</i></a>
+      </div>
+      <div class="hero-shape">AMBER<br><small>STREETWEAR</small></div>
+      <p class="scroll">SCROLL PARA DESCUBRIR ↓</p>
+    </section>
+
+    <section class="statement" id="historia">
+      <p class="eyebrow">01 / LA ACTITUD</p>
+      <h2>LA ADVERSIDAD<br>ES <em>EL INICIO.</em></h2>
+      <div>
+        <p><strong>AMBER nace de la adversidad.</strong> Cada obstáculo es una oportunidad disfrazada. Diseñamos para quienes no se rinden.</p>
+        <p>Streetwear rebelde, moderno y sin límites. Hecho en España. Pensado para el mundo.</p>
+        <a class="text-link" href="#contacto">CONOCE AMBER →</a>
+      </div>
+    </section>
+
+    <section class="products" id="coleccion">
+      <div class="section-head">
+        <p class="eyebrow">02 / LO ÚLTIMO</p>
+        <h2>DROP <em>01</em></h2>
+        <a href="#coleccion">VER TODO →</a>
+      </div>
+      <div class="grid" id="productGrid"></div>
+    </section>
+
+    <section class="manifesto">
+      <p>ROMPE LAS REGLAS. <em>CREA TU PROPIO CAMINO.</em></p>
+      <p>SIN LÍMITES. SIN EXCUSAS. <em>SOLO ACCIÓN.</em></p>
+      <p>SÉ TÚ MISMO. <em>SIN FILTROS. SIN MIEDO.</em></p>
+    </section>
+
+    <section class="lookbook" id="lookbook">
+      <div class="look-image"><span>AMBER<br>IN ACTION</span></div>
+      <div class="look-text">
+        <p class="eyebrow">03 / LOOKBOOK</p>
+        <h2>VIVE<br><em>SIN MIEDO.</em></h2>
+        <p>La ropa es solo el principio. La actitud lo cambia todo.</p>
+        <a class="button light" href="#contacto">VER LOOKBOOK <i>↘</i></a>
+      </div>
+    </section>
+
+    <section class="newsletter" id="contacto">
+      <p class="eyebrow">04 / COMUNIDAD</p>
+      <h2>HABLEMOS.</h2>
+      <p>Recibe acceso anticipado a los drops, historias y noticias de AMBER.</p>
+      <form id="newsletterForm">
+        <label class="sr-only" for="email">Tu email</label>
+        <input id="email" type="email" required placeholder="TU EMAIL" />
+        <button type="submit">UNIRME →</button>
+      </form>
+      <p class="fine">Al registrarte aceptas nuestra política de privacidad.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#inicio">AMBER<span>®</span></a>
+    <div>
+      <a href="#coleccion">Shop</a>
+      <a href="#historia">Manifiesto</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <p>© 2026 AMBER. HECHO EN ESPAÑA.</p>
+  </footer>
+
+  <aside class="cart" aria-label="Bolsa de compra">
+    <div class="cart-head">
+      <h2>TU BOLSA</h2>
+      <button id="closeCart" aria-label="Cerrar bolsa">×</button>
+    </div>
+    <div id="cartItems">
+      <p class="empty">Tu bolsa está vacía.<br>El siguiente paso empieza ahora.</p>
+    </div>
+    <div class="cart-total">
+      <span>TOTAL</span>
+      <b id="total">0,00 €</b>
+      <button class="button amber">FINALIZAR COMPRA →</button>
+    </div>
+  </aside>
+
+  <div class="overlay"></div>
+  <div class="toast" role="status"></div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
