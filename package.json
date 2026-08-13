@@ -2,6 +2,7 @@
   "name": "amber-streetwear",
   "version": "1.0.0",
   "private": true,
+  "description": "AMBER Streetwear PWA + Capacitor app",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
