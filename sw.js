@@ -4,6 +4,7 @@ const ASSETS = [
   './index.html',
   './styles.css',
   './app.js',
+  './vite.config.js',
   './manifest.webmanifest',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
