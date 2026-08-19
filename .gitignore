@@ -9,3 +9,13 @@ dist/
 .android/
 .ios/
 capacitor/.idea/
+
+# Temporary local AMBER asset backups
+.amber-brand-backup/
+.amber-icons-backup/
+
+# Temporary local AMBER public backup
+.amber-public-backup/
+
+# Temporary local test files
+index.html.con-cuenta-rota

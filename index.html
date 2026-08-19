@@ -16,6 +16,34 @@
 <body>
   <div class="notice">ENVÍO GRATIS EN PEDIDOS +80€ <span>·</span> HECHO EN CANARIA</div>
 
+  <!-- CUENTA AMBER -->
+  <div class="account-bar" id="accountBar">
+    <button id="accountButton" type="button" aria-expanded="false">
+      CUENTA <span id="accountStatus">ENTRAR</span>
+    </button>
+  </div>
+
+  <aside class="account-panel" id="accountPanel" aria-label="Cuenta AMBER">
+    <div class="account-head">
+      <h2>MI CUENTA</h2>
+      <button id="closeAccount" type="button" aria-label="Cerrar cuenta">×</button>
+    </div>
+
+    <div id="accountContent">
+      <p class="empty">Inicia sesión para guardar tu cuenta y tus compras.</p>
+
+      <form id="loginForm">
+        <label for="loginName">NOMBRE</label>
+        <input id="loginName" type="text" required autocomplete="name">
+
+        <label for="loginEmail">EMAIL</label>
+        <input id="loginEmail" type="email" required autocomplete="email">
+
+        <button class="button amber" type="submit">ENTRAR EN AMBER →</button>
+      </form>
+    </div>
+  </aside>
+
   <header class="header">
     <a class="brand" href="#inicio" aria-label="AMBER inicio">AMBER<span>®</span></a>
     <button class="menu-btn" aria-label="Abrir menú" aria-expanded="false">MENÚ</button>
@@ -110,8 +138,17 @@
     <div class="cart-total">
       <span>TOTAL</span>
       <b id="total">0,00 €</b>
-      <button class="button amber">FINALIZAR COMPRA →</button>
+      <button id="checkoutButton" class="button amber" type="button">FINALIZAR COMPRA →</button>
     </div>
+  </aside>
+
+  <aside class="checkout-panel" id="checkoutPanel" aria-label="Finalizar compra">
+    <div class="checkout-head">
+      <h2>FINALIZAR COMPRA</h2>
+      <button id="closeCheckout" type="button" aria-label="Cerrar checkout">×</button>
+    </div>
+
+    <div id="checkoutContent"></div>
   </aside>
 
   <div class="overlay"></div>
