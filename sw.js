@@ -32,6 +32,8 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
 
+  const scheme = new URL(event.request.url).protocol;
+  if (scheme !== 'http:' && scheme !== 'https:') return;
   event.respondWith(
     caches.match(event.request).then(cached => {
       if (cached) return cached;
