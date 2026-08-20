@@ -24,7 +24,7 @@ async function handlePaymentResult() {
 
     try {
       const response = await fetch(
-        `http://192.168.1.66:4242/api/verify-payment?session_id=${encodeURIComponent(sessionId)}`
+        `http://127.0.0.1:4242/api/verify-payment?session_id=${encodeURIComponent(sessionId)}`
       );
 
       const result = await response.json();
@@ -731,7 +731,7 @@ function renderPayment() {
 
       try {
         const response = await fetch(
-          'http://192.168.1.66:4242/api/create-checkout-session',
+          'http://127.0.0.1:4242/api/create-checkout-session',
           {
             method: 'POST',
             headers: {
