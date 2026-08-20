@@ -153,9 +153,9 @@ const server = http.createServer(async (req, res) => {
         mode: 'payment',
         line_items: lineItems,
         success_url:
-          'http://192.168.1.66:4173/?payment=success&session_id={CHECKOUT_SESSION_ID}',
+          'http://localhost:5173/?payment=success&session_id={CHECKOUT_SESSION_ID}',
         cancel_url:
-          'http://192.168.1.66:4173/?payment=cancelled'
+          'http://localhost:5173/?payment=cancelled'
       });
 
       sendJson(res, 200, {
