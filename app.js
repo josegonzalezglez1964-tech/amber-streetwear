@@ -1,5 +1,3 @@
-
-
 // ================================
 // RESULTADO DEL PAGO STRIPE
 // ================================
@@ -267,6 +265,7 @@ document.addEventListener('click', event => {
     toast.classList.remove('show');
   }, 1900);
 });
+
 // ================================
 // CONTROLES DE CANTIDAD DE LA CESTA
 // ================================
@@ -306,6 +305,7 @@ document.addEventListener('click', event => {
   saveCart();
   render();
 });
+
 // ================================
 // MENÚ
 // ================================
@@ -839,7 +839,6 @@ function renderPayment() {
     });
   }
 }
-
 
 if (checkoutButton && checkoutPanel) {
   checkoutButton.addEventListener('click', () => {
