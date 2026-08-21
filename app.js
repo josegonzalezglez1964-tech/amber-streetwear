@@ -146,10 +146,45 @@ function render() {
   count.textContent = cart.length;
 
   if (cart.length) {
-    items.innerHTML = cart.map(index => `
+    const quantities = cart.reduce((result, index) => {
+      result[index] = (result[index] || 0) + 1;
+      return result;
+    }, {});
+
+    items.innerHTML = Object.entries(quantities).map(([index, quantity]) => `
       <div class="cart-item">
-        <span>${products[index][0]}</span>
-        <span>${products[index][1]}</span>
+        <div>
+          <strong>${products[index][0]}</strong>
+
+          <div class="cart-quantity">
+            <button
+              type="button"
+              data-cart-action="decrease"
+              data-product="${index}"
+              aria-label="Disminuir cantidad"
+            >−</button>
+
+            <span>${quantity}</span>
+
+            <button
+              type="button"
+              data-cart-action="increase"
+              data-product="${index}"
+              aria-label="Aumentar cantidad"
+            >+</button>
+          </div>
+        </div>
+
+        <div>
+          <span>${products[index][1]}</span>
+
+          <button
+            type="button"
+            data-cart-action="remove"
+            data-product="${index}"
+            aria-label="Eliminar producto"
+          >ELIMINAR</button>
+        </div>
       </div>
     `).join('');
   } else {
