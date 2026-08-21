@@ -232,7 +232,45 @@ document.addEventListener('click', event => {
     toast.classList.remove('show');
   }, 1900);
 });
+// ================================
+// CONTROLES DE CANTIDAD DE LA CESTA
+// ================================
 
+document.addEventListener('click', event => {
+  const button = event.target.closest('[data-cart-action]');
+
+  if (!button) {
+    return;
+  }
+
+  const index = Number(button.dataset.product);
+  const action = button.dataset.cartAction;
+
+  if (
+    !Number.isInteger(index) ||
+    index < 0 ||
+    index >= products.length
+  ) {
+    return;
+  }
+
+  if (action === 'increase') {
+    cart.push(index);
+  } else if (action === 'decrease') {
+    const position = cart.lastIndexOf(index);
+
+    if (position !== -1) {
+      cart.splice(position, 1);
+    }
+  } else if (action === 'remove') {
+    cart = cart.filter(item => item !== index);
+  } else {
+    return;
+  }
+
+  saveCart();
+  render();
+});
 // ================================
 // MENÚ
 // ================================
