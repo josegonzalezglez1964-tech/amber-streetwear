@@ -1,5 +1,3 @@
-
-
 // ================================
 // RESULTADO DEL PAGO STRIPE
 // ================================
@@ -840,7 +838,6 @@ function renderPayment() {
     });
   }
 }
-
 
 if (checkoutButton && checkoutPanel) {
   checkoutButton.addEventListener('click', () => {
