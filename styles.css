@@ -49,6 +49,13 @@ body{
   vertical-align:top;
   margin-left:4px;
 }
+.brand img{
+  display:block;
+  width:auto;
+  height:42px;
+  max-width:220px;
+  object-fit:contain;
+}
 .header nav{
   display:flex;
   gap:25px;

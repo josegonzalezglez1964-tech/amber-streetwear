@@ -45,7 +45,7 @@
   </aside>
 
   <header class="header">
-    <a class="brand" href="#inicio" aria-label="AMBER inicio"><img src="assets/brand/amber-logo-primary-canarias.png" alt="AMBER"></a>
+    <a class="brand" href="#inicio" aria-label="AMBER inicio">AMBER<span>®</span></a>
     <button class="menu-btn" aria-label="Abrir menú" aria-expanded="false">MENÚ</button>
     <nav id="nav">
       <a href="#coleccion">Colección</a>
