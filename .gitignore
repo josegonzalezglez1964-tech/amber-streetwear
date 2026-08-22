@@ -19,3 +19,7 @@ capacitor/.idea/
 
 # Temporary local test files
 index.html.con-cuenta-rota
+
+# Copias de seguridad locales
+*.backup
+*.backup-*
